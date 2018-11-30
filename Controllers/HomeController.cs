@@ -19,8 +19,9 @@ namespace play.Controllers
         public IActionResult About()
         {
             var num1 = DateTime.Now;
-            var num2 = DateTime.Parse("25/12/2018");
-            var output = num2 - num1;
+            
+            var num2 = DateTime.Parse("12/25/2018");
+            var output = num2.Subtract(num1).Days;
             ViewData["timespan"] = output;
 
             ViewData["Message"] = "Your application description page.";
